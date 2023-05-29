@@ -1,0 +1,78 @@
+bool active = true;
+while(active)
+{
+    Console.ForegroundColor = ConsoleColor.Blue;
+    Console.WriteLine("Calcuator...");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("enter first num");
+    double num1 = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("+, -, *, /, ^");
+    string sign = Console.ReadLine();
+    Console.WriteLine("enter second num");
+    double num2 = Convert.ToDouble(Console.ReadLine());
+
+    switch (sign)
+    {
+        case "+":
+            double sum1 = num1 + num2;
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(sum1);
+            Console.ForegroundColor = ConsoleColor.White;
+            break;
+
+        case "-":
+            Console.ForegroundColor = ConsoleColor.Blue;
+            double sum2 = num1 - num2;
+            Console.WriteLine(sum2);
+            Console.ForegroundColor = ConsoleColor.White;
+            break;
+
+        case "*":
+            Console.ForegroundColor = ConsoleColor.Blue;
+            double num3 = num1 * num2;
+            Console.WriteLine(num3);
+            Console.ForegroundColor = ConsoleColor.White;
+            break;
+
+        case "/":
+            Console.ForegroundColor = ConsoleColor.Blue;
+            double num4 = num1 / num2;
+            Console.WriteLine(num4);
+            Console.ForegroundColor = ConsoleColor.White;
+            break;
+
+        case "^":
+            Console.ForegroundColor = ConsoleColor.Blue;
+            double num5 = Math.Pow(num1, num2);
+            Console.WriteLine(num5);
+            Console.ForegroundColor = ConsoleColor.White;
+            break;
+
+
+    }
+
+    Console.WriteLine("Continue?");
+    Console.WriteLine("Y/N");
+    string input = Console.ReadLine();
+    input = input.ToUpper();
+
+    if (input == "Y")
+    {
+        active = true;
+    }
+
+    else
+    {
+        active = false;
+    }
+   
+
+    
+
+    
+}
+
+if (active = false)
+{
+    return;
+}
